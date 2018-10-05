@@ -1,0 +1,71 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 96px 0;
+    background: linear-gradient(124deg, #275937, #61c250, #ecf4de, #1a1a1a, #404040, #bbbbbb, #f1f1f1, #000000, #ffffff);
+    background-size: 2000% 2000%;
+    text-shadow: 2px 2px 2px #404040;
+    -webkit-animation: rainbow 50s ease infinite;
+    -z-animation: rainbow 50s ease infinite;
+    -o-animation: rainbow 50s ease infinite;
+    animation: rainbow 50s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position:0% 82%;
+    }
+
+    50% {
+        background-position:100% 19%;
+    }
+
+    100% { 
+        background-position:0% 82%;
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position:0% 82%;
+    }
+
+    50% {
+        background-position:100% 19%;
+    }
+
+    100% { 
+        background-position:0% 82%;
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position:0% 82%;
+    }
+
+    50% {
+        background-position:100% 19%;
+    }
+
+    100% { 
+        background-position:0% 82%;
+    }
+}
+
+@keyframes rainbow { 
+    0% {
+        background-position:0% 82%;
+    }
+
+    50% {
+        background-position:100% 19%;
+    }
+
+    100% { 
+        background-position:0% 82%;
+    }
+}
