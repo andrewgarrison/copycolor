@@ -1,0 +1,25 @@
+.c-analyze {
+    width: 100%;
+}
+
+.c-analyze .contrast-results {
+    width: 100%;
+    margin-left: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.span-col-2{
+    grid-column: span 2 / auto;
+}
+
+@media (min-width: 650px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px;
+    }
+}

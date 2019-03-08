@@ -147,7 +147,5 @@
 #color-picked {
     display: block;
     font-size: 64px;
-    color: white;
     margin-top: 1em;
-    text-shadow: 3px 3px 3px black;
 }

@@ -1,0 +1,14 @@
+.c-ratio {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.c-ratio__num {
+    margin: 0;
+}
+
+.c-ratio__label {
+    display: block;
+    font-size: 24px;
+}

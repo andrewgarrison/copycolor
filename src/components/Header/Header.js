@@ -7,8 +7,8 @@ class Header extends Component {
       return (
         <header style={{backgroundColor: Colors.grays.gray.hex, color: Colors.neutrals.white.hex}}>
           <div className='container'>
-            <h1>CopyColor</h1>
-            <h6>By Andrew Garrison</h6>
+            <h1>UX Colors</h1>
+            <h6>Gallup</h6>
           </div>
         </header>
       );

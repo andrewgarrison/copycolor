@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import './ColorGrid.css';
+import chooseColor from '../Helpers.js';
 
 class ColorGrid extends Component {
     state = {
@@ -18,14 +19,15 @@ class ColorGrid extends Component {
       page[0].style.backgroundColor = 'transparent';
     }
   
-    showCopiedMessage(color) {
+    showCopiedMessage(hex, rgb) {
       let page = document.getElementsByClassName('overlay');
       let copyMessageText = document.getElementById('copy-message-text');
       let colorPicked = document.getElementById('color-picked');
       page[0].classList.add('show');
-      colorPicked.innerHTML = color;
+      colorPicked.innerHTML = hex;
+      colorPicked.style.color = chooseColor(rgb)
       copyMessageText.classList.add('show');
-      page[0].style.backgroundColor = color;
+      page[0].style.backgroundColor = hex;
       setTimeout(this.hideCopiedMessage, 1500);
     }
   
@@ -37,7 +39,7 @@ class ColorGrid extends Component {
               text={this.props.hex.toString()} 
               onCopy={() => this.setState({copied: true})}
             >
-              <div onClick={(e) => this.showCopiedMessage(this.props.hex.toString())} className='c-swatch-color' style={{backgroundColor: this.props.hex}}></div>
+              <div onClick={(e) => this.showCopiedMessage(this.props.hex.toString(), this.props.rgb.toString())} className='c-swatch-color' style={{backgroundColor: this.props.hex}}></div>
             </CopyToClipboard>
             <div className='c-swatch-info'>
               <p>Hex: {this.props.hex}</p>
