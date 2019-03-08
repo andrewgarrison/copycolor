@@ -19,6 +19,7 @@ class ContrastAnalyzer extends Component {
 
 		this.handleTextColorChange = this.handleTextColorChange.bind(this);
 		this.handleBgColorChange = this.handleBgColorChange.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 	}
 
 	handleTextColorChange(color) {
@@ -27,6 +28,30 @@ class ContrastAnalyzer extends Component {
 
 	handleBgColorChange(color) {
 		this.setState({bgColor: color});
+	}
+
+	handleReset() {
+		this.setState({
+			textColor: '',
+			bgColor: '',
+			ratio: 0,
+			AA: '',
+			AAA: '',
+			AALarge: '',
+			AAALarge: ''
+		});
+
+		let textColors = document.getElementsByName("text-color");
+
+   		for (let i = 0; i < textColors.length; i++) {
+			textColors[i].checked = false;
+		}
+
+		let bgColors = document.getElementsByName("bg-color");
+		
+		for (let i = 0; i < bgColors.length; i++) {
+		 bgColors[i].checked = false;
+	 }
 	}
 
 	trim(hex) {
@@ -46,7 +71,6 @@ class ContrastAnalyzer extends Component {
 					AALarge: result.AALarge,
 					AAALarge: result.AAALarge
 				})
-				console.log(result);
 			});
 		}
 	}
@@ -63,10 +87,10 @@ class ContrastAnalyzer extends Component {
 				<div className="c-analyze">
 					<h6 className='c-section-heading'>02. Color Contrast Analyzer</h6>
 					<div className='grid'>
-						<div>
+						<div className='span-col-1'>
 							<TextColor onTextColorChange={this.handleTextColorChange}/>
 						</div>
-						<div>
+						<div className='span-col-1'>
 							<BackgroundColor onBgColorChange={this.handleBgColorChange}/>
 						</div>
 						<div className='span-col-2'>
@@ -78,6 +102,7 @@ class ContrastAnalyzer extends Component {
 								AAA={this.state.AAA}
 								AALarge={this.state.AALarge}
 								AAALarge={this.state.AAALarge}
+								onResetClick={this.handleReset}
 							/>
 						</div>
 					</div>

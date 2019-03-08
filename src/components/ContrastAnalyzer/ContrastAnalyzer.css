@@ -4,7 +4,6 @@
 
 .c-analyze .contrast-results {
     width: 100%;
-    margin-left: 100px;
 }
 
 .grid {
@@ -13,13 +12,19 @@
     grid-gap: 30px;
 }
 
-.span-col-2{
+.span-col-2 {
     grid-column: span 2 / auto;
+    padding-left: 0;
 }
 
 @media (min-width: 650px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 40px;
+        grid-gap: 60px;
+    }
+
+    .span-col-2 {
+        grid-column: span 2 / auto;
+        padding-left: 60px;
     }
 }

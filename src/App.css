@@ -64,6 +64,20 @@ section {
   grid-column: span 4 / auto;
 }
 
+.btn {
+  font-size: 16px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 3px;
+  margin: 40px 0;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #bbbbbb;
+  color: #2b2b2b;
+}
+
 .c-section-heading:before {
   display: block;
   width: 30px;
@@ -75,4 +89,8 @@ section {
 
 .flex-container {
   display: flex;
+}
+
+.dark-green {
+  color: #007934;
 }

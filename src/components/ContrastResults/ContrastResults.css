@@ -12,3 +12,17 @@
     display: block;
     font-size: 24px;
 }
+
+.c-wcag__sample {
+    padding: 10px;
+    text-align: center;
+}
+
+.c-wcag__sample--normal p {
+    font-size: 16px;
+}
+
+.c-wcag__sample--large p {
+    font-weight: bolder;
+    font-size: 18px;
+}
