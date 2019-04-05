@@ -5,7 +5,8 @@ header {
     flex-direction: column;
     text-align: center;
     padding: 96px 0;
-    background: linear-gradient(124deg, #275937, #61c250, #ecf4de, #1a1a1a, #404040, #bbbbbb, #f1f1f1, #000000, #ffffff);
+    /* background: linear-gradient(124deg, #275937, #61c250, #ecf4de, #1a1a1a, #404040, #bbbbbb, #f1f1f1, #000000, #ffffff);*/
+    background-color: #666;
     background-size: 2000% 2000%;
     text-shadow: 2px 2px 2px #404040;
     -webkit-animation: rainbow 50s ease infinite;

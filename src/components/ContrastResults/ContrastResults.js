@@ -26,11 +26,11 @@ class ContrastResults extends Component {
                 <h4>Results</h4>
                 {this.props.ratio >= 4.5 ? (
                     <div className='c-ratio' style={{border: '5px solid #007934'}}>
-                        <h2 className='c-ratio__num'><span className='c-ratio__label'>Contrast Ratio:</span> {this.props.ratio.toFixed(2)}</h2>
+                        <h2 className='c-ratio__num'><span className='c-ratio__label'>Contrast Ratio:</span> {this.props.ratio}</h2>
                     </div>
                 ) : (
                     <div className='c-ratio' style={{border: '5px solid #e0e0e0'}}>
-                        <h2 className='c-ratio__num'><span className='c-ratio__label'>Contrast Ratio:</span> {this.props.ratio.toFixed(2)}</h2>
+                        <h2 className='c-ratio__num'><span className='c-ratio__label'>Contrast Ratio:</span> {this.props.ratio}</h2>
                     </div>
                 )} 
                 <div className='c-wcag'>
